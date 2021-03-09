@@ -1,4 +1,4 @@
-int funo = 2;
+    int funo = 2;
 int fdos = 3;
 int ftres = 4;
 
@@ -25,25 +25,29 @@ void loop() {
   Serial.print("Valor sensor de Llum: \t");
   Serial.println(valorsensor);
 
-   if (valorsensor = valorminim) {
+   if (valorsensor == valorminim) {
     digitalWrite(2, LOW);
     digitalWrite(3, LOW);
     digitalWrite(4, LOW);
-  } // if the temperature rises 2-4 degrees, turn an LED on
-  else if (valorsensor <= 10) {
+    Serial.print("Res encés");
+  } 
+  else if (valorsensor <= 10 && valorsensor >= 1) {
     digitalWrite(2, HIGH);
     digitalWrite(3, LOW);
     digitalWrite(4, LOW);
-  } // if the temperature rises 4-6 degrees, turn a second LED on
-  else if (valorsensor >= 10) {
+    Serial.print("Un LED encés -> ");
+  } 
+  else if (valorsensor > 10 && valorsensor <= 99) {
     digitalWrite(2, HIGH);
     digitalWrite(3, HIGH);
     digitalWrite(4, LOW);
-  } // if the temperature rises more than 6 degrees, turn all LEDs on
+    Serial.print("Dos LEDs encesos -> ");
+  } 
   else if (valorsensor >= 100) {
     digitalWrite(2, HIGH);
     digitalWrite(3, HIGH);
     digitalWrite(4, HIGH);
+    Serial.print("Tots els LEDs encesos -> ");
   }
 
   
