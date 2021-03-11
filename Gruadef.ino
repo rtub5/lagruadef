@@ -1,4 +1,4 @@
-    int funo = 2;
+int funo = 2;
 int fdos = 3;
 int ftres = 4;
 
@@ -16,7 +16,6 @@ void setup() {
   pinMode(funo, OUTPUT);
   pinMode(fdos, OUTPUT);
   pinMode(ftres, OUTPUT);
-  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
